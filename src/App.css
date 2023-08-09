@@ -1,38 +1,116 @@
+/* Из-за малочисленного количества элементов 
+на странице SPA-приложения было принято решение 
+не использовать flex и grid (кроме тега li) */
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
+  padding-left: 3px;
+  padding-right: 3px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+li {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 0.5rem;
+}
+.todoList__container {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000;
+  border-radius: 30px;
+  resize: horizontal;
+  overflow: hidden;
+  max-width: 80%;
+  min-width: 25%;
+  width: 25%;
+  min-height: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.deleteButton {
+  color: red;
+  cursor: pointer;
+  font-size: xx-large;
+}
+input:checked + span {
+  text-decoration: line-through;
+  color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  margin-top: 10px;
+  color: aqua;
+  filter: drop-shadow(3px 3px 10px #1959e3);
+}
+.TodoList__header{
+  margin-top: 30px;
+  color: aqua;
+  text-shadow: 1px 1px 3px #000;
+}
+.inputField {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+.inputField__input {
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  width: 25%;
+  height: 2rem;
+  font-size: large;
+  border-radius: 10px;
+}
+.inputField__button {
+  height: 2.4rem;
+  border-radius: 30px;
+  min-width: 90px;
+  width: 15%;
+  margin-left: 10px;
+  background-color: aqua;
+  color: aliceblue;
+  font-style: initial;
+  filter: drop-shadow(3px 3px 10px #1959e3);
+}
+.inputField__button:hover {
+  background-color: blue;
+}
+.inputField__button:active {
+  filter: drop-shadow(3px 3px 10px #000);
+}
+.todoList__section {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25%;
+  background: blue;
+  color: #fff;
+  border: 1px solid black;
+}
+
+.TaskName__Span {
+  font-size: xx-large;
+  color: aqua;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.TaskName__Span:hover {
+  filter: drop-shadow(3px 3px 10px #1959e3);
+}
+
+.TaskName__Span:active {
+  filter: drop-shadow(3px 3px 10px #000);
+}
+
+.checkbox__input {
+  min-height: 21px;
+  min-width: 21px;
+  margin-bottom: 0;
 }
